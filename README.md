@@ -57,12 +57,13 @@ This project provides authentication, product management, cart, orders, and user
 
 ## 🗂️ Project Structure
 
+```txt
 src/
 ├── auth/
-│ ├── auth.controller.ts
-│ ├── auth.service.ts
-│ ├── strategies/
-│ └── guards/
+│   ├── auth.controller.ts
+│   ├── auth.service.ts
+│   ├── strategies/
+│   └── guards/
 ├── users/
 ├── products/
 ├── cart/
