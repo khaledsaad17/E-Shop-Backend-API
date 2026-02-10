@@ -11,7 +11,7 @@ This project provides authentication, product management, cart, orders, and user
 - User registration & login (JWT)
 - Access token & refresh token flow
 - Google OAuth authentication
-- Forgot / Reset password via email
+- Forgot / reset password via email
 - Secure logout
 - Get current authenticated user
 
@@ -48,8 +48,8 @@ This project provides authentication, product management, cart, orders, and user
 - **TypeScript**
 - **JWT Authentication**
 - **Passport.js**
-- **MongoDB 
-- **Mongoose 
+- **MongoDB**
+- **Mongoose**
 - **Bcrypt**
 - **Nodemailer**
 
@@ -69,30 +69,3 @@ src/
 ├── cart/
 ├── orders/
 └── main.ts
-
-🔒 Security Practices
-
-Password hashing using bcrypt
-Short-lived access tokens
-Refresh token rotation
-Protected routes using JWT Guards
-Input validation using class-validator
-CORS configured for frontend access
-
-📌 Notes
-
-Admin endpoints are not implemented in this project
-Focused on user-side e-commerce functionality
-Can be extended easily with admin dashboard & payments
-Designed for scalability and clean architecture
-
-📎 Useful Links
-
-NestJS Docs: https://docs.nestjs.com
-Passport.js: http://www.passportjs.org
-JWT: https://jwt.io
-
-👨‍💻 Author
-
-**Khaled Saad**
-Backend Developer | NestJS | REST APIs | Authentication
