@@ -1,6 +1,6 @@
 # 🛒 E-Shop Backend API
 
-A fully-featured **E-Commerce Backend REST API** built with **NestJS**.  
+A fully-featured **E-Shop Backend REST API** built with **NestJS**.  
 This project provides authentication, product management, cart, orders, and user profile functionality for an e-commerce frontend application.
 
 ---
