@@ -65,11 +65,23 @@ After running the project locally, Swagger will be available at:
 👉 http://localhost:3000/docs
 
 
+---
+
+
+
 ## 📸 Swagger Preview
 
 ![Swagger UI](./screenshots/swagger.jpeg)
 
 ---
+
+
+## 📅 Project Timeline
+Duration: 2 weeks  
+Status: Completed & Maintained
+
+---
+
 
 ## 🗂️ Project Structure
 
@@ -85,4 +97,5 @@ src/
 ├── cart/
 ├── orders/
 └── main.ts
+
 
