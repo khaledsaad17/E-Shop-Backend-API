@@ -8,6 +8,9 @@ import {
   ValidateNested,
 } from 'class-validator';
 
+/**
+ * here i do not use @ApiProperty() because this used in add product only by admin and i remove admin panle
+ */
 export class ProductDto {
   @IsString()
   @IsNotEmpty()

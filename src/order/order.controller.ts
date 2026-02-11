@@ -5,7 +5,9 @@ import * as jwtPayloadInterface from '../auth/DTO/jwt-payload.interface';
 import { OrderFilterDto } from './DTO/order-filter.dto';
 import { MongoIdDto } from 'src/cart-item/DTO/mongo-id.dto';
 import { CreateOrderDto } from './DTO/create-order.dto';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
+@ApiBearerAuth()
 @Controller('orders')
 export class OrderController {
   constructor(private readonly orderService: OrderService) {}

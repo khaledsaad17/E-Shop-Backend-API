@@ -1,6 +1,9 @@
 import { IsOptional, IsString, IsNumber, Min } from 'class-validator';
 import { Type } from 'class-transformer';
 
+/**
+ * this is optional dto so it is  maybe not used
+ */
 export class FiltersProductsDto {
   @IsOptional()
   @IsString()

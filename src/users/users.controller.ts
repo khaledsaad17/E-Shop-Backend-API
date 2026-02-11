@@ -17,7 +17,9 @@ import { GetUser } from 'src/auth/Decorator/get-user-info.decorator';
 import * as jwtPayloadInterface from '../auth/DTO/jwt-payload.interface';
 import { UpdateUserInfoDto } from './DTO/update-profile.dto';
 import { UpdateUserPasswordDto } from './DTO/change-password.dto';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
+@ApiBearerAuth()
 @Controller('users')
 export class UsersController {
   constructor(
@@ -25,28 +27,28 @@ export class UsersController {
     private readonly productsService: ProductsService,
   ) {}
 
-  /**
-   * admin endpoints
-   *
-   */
-  // insert one porduct
-  //   @UseGuards(AddProductGuard)
-  @SkipAuth(true)
-  @Role(roleUser.admin)
-  @Post('/admin/Products')
-  addProducts(@Body() body: ProductDto) {
-    console.log(body);
-    // return body;
+  // /**
+  //  * admin endpoints
+  //  *
+  //  */
+  // // insert one porduct
+  // //   @UseGuards(AddProductGuard)
+  // @SkipAuth(true)
+  // @Role(roleUser.admin)
+  // @Post('/admin/Products')
+  // addProducts(@Body() body: ProductDto) {
+  //   console.log(body);
+  //   // return body;
 
-    return this.productsService.addOneProduct(body);
-  }
+  //   return this.productsService.addOneProduct(body);
+  // }
 
-  // for insert many products at once
-  @SkipAuth(true)
-  @Post('/admin/many/Products')
-  addManyProducts(@Body() body: ManyProductsDto) {
-    return this.productsService.addManyProducts(body.products);
-  }
+  // // for insert many products at once
+  // @SkipAuth(true)
+  // @Post('/admin/many/Products')
+  // addManyProducts(@Body() body: ManyProductsDto) {
+  //   return this.productsService.addManyProducts(body.products);
+  // }
 
   /**
    * normal user endpoints

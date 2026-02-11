@@ -12,7 +12,9 @@ import { GetUser } from 'src/auth/Decorator/get-user-info.decorator';
 import * as jwtPayloadInterface from '../auth/DTO/jwt-payload.interface';
 import { ItemCarDto } from './DTO/item-card.dto';
 import { MongoIdDto } from './DTO/mongo-id.dto';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
+@ApiBearerAuth()
 @Controller('cart')
 export class CartItemController {
   constructor(private readonly cartItemService: CartItemService) {}

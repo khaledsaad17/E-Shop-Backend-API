@@ -6,12 +6,12 @@ import { RegisterUserDto } from 'src/users/DTO/user-register.dto';
 import { AuthService } from './auth.service';
 import { LoginUserDto } from 'src/users/DTO/user-login.dto';
 import { ConfigService } from '@nestjs/config';
-import { JwtTokenAuthGuard } from './jwt-token-auth.guard';
 import { GetUser } from './Decorator/get-user-info.decorator';
 import * as jwtPayloadInterface from './DTO/jwt-payload.interface';
 import { SkipAuth } from './Decorator/skip-auth.decorator';
 import { AuthGuard } from '@nestjs/passport';
 import { ResetPassword } from './DTO/reset-password.dto';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
 @Controller('auth')
 export class AuthController {
@@ -39,8 +39,8 @@ export class AuthController {
   @UseGuards(AuthGuard('googleAuth'))
   googleAuth() {}
 
-  @UseGuards(AuthGuard('googleAuth'))
   @SkipAuth(true)
+  @UseGuards(AuthGuard('googleAuth'))
   @Get('google/callback')
   async googleAuthRedirect(
     @GetUser() user: jwtPayloadInterface.Payload,
@@ -85,22 +85,24 @@ export class AuthController {
     return this.authSerivce.resetPassword(body.token, body.newPassword);
   }
 
+  @ApiBearerAuth()
   @Post('/logout')
   logoutUser(@GetUser() user: jwtPayloadInterface.Payload) {
     return this.authSerivce.reomoveUserRefreshToken(user.id);
   }
 
+  @ApiBearerAuth()
   @Get('/me')
   getCurrentUser(@GetUser() user: jwtPayloadInterface.Payload) {
     return user;
   }
 
-  // @SkipAuth(false)
-  @UseGuards(JwtTokenAuthGuard)
-  @Get('/test')
-  testing(@GetUser() user: jwtPayloadInterface.Payload) {
-    console.log(user);
+  // // @SkipAuth(false)
+  // @UseGuards(JwtTokenAuthGuard)
+  // @Get('/test')
+  // testing(@GetUser() user: jwtPayloadInterface.Payload) {
+  //   console.log(user);
 
-    return { message: 'this for test protected routes', currentUser: user };
-  }
+  //   return { message: 'this for test protected routes', currentUser: user };
+  // }
 }
