@@ -53,6 +53,17 @@ This project provides authentication, product management, cart, orders, and user
 - **Bcrypt**
 - **Nodemailer**
 
+
+---
+
+
+## 📚 API Documentation (Swagger)
+
+After running the project locally, Swagger will be available at:
+
+👉 http://localhost:3000/docs
+
+
 ---
 
 ## 🗂️ Project Structure
@@ -69,3 +80,4 @@ src/
 ├── cart/
 ├── orders/
 └── main.ts
+
