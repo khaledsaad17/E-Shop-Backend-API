@@ -2,7 +2,7 @@
 
 A fully-featured **E-Shop Backend REST API** built with **NestJS**.  
 This project provides authentication, product management, cart, orders, and user profile functionality for an e-commerce frontend application.
-project run with mongo database usgin cloud storage, not local.
+> ⚡ The project uses MongoDB Atlas (cloud database), not a local database.
 
 ---
 
@@ -93,7 +93,8 @@ After running the project locally, Swagger will be available at:
 
 ## 📅 Project Timeline
 Duration: 2 weeks  
-Status: Completed & Maintained
+Status: Status: Production-ready & actively maintained
+
 
 ---
 
