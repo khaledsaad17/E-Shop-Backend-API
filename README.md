@@ -2,6 +2,7 @@
 
 A fully-featured **E-Shop Backend REST API** built with **NestJS**.  
 This project provides authentication, product management, cart, orders, and user profile functionality for an e-commerce frontend application.
+project run with mongo database usgin cloud storage, not local.
 
 ---
 
