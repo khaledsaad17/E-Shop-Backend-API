@@ -55,8 +55,23 @@ project run with mongo database usgin cloud storage, not local.
 - **Nodemailer**
 
 
+## 🌍 Database
+- MongoDB Atlas (Cloud-hosted database)
+
+
 ---
 
+
+## 🛠 Installation & Running
+
+```bash
+git clone https://github.com/khaledsaad17/E-Shop-Backend-API.git
+cd E-Shop-Backend-API
+npm install
+npm run start:dev
+
+```
+---
 
 ## 📚 API Documentation (Swagger)
 
