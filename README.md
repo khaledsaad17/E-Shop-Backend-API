@@ -65,6 +65,10 @@ After running the project locally, Swagger will be available at:
 👉 http://localhost:3000/docs
 
 
+## 📸 Swagger Preview
+
+![Swagger UI](./screenshots/swagger.jpeg)
+
 ---
 
 ## 🗂️ Project Structure
